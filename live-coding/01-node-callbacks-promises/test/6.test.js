@@ -15,11 +15,11 @@ describe('1. dotenv', () => {
   afterEach(() => {
     try {
       unlinkSync('.env')
-    } catch {}
+    } catch { }
 
     try {
       unlinkSync('./test/.env.local')
-    } catch {}
+    } catch { }
   })
 
   it('1.1. load .env file', () => {
@@ -53,5 +53,5 @@ describe('1. dotenv', () => {
     } catch (error) {
       equal(error.code, 'MODULE_NOT_FOUND')
     }
-  })
-})
+  });
+});
